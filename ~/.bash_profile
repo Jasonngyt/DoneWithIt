@@ -1,0 +1,1 @@
+export ANDROID_SDK=/Users/Ng/AppData/Local/Android/Sdk
