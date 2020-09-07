@@ -1,14 +1,15 @@
-import React from 'react';
-import { useFormikContext } from 'formik';
+import React from "react";
+import { useFormikContext } from "formik";
 
-import AppTextInput from '../AppTextInput';
-import ErrorMessage from './ErrorMessage';
+import TextInput from "../TextInput";
+import ErrorMessage from "./ErrorMessage";
 
-export default function AppFormField({ name, width, ...otherProps }) {
+function AppFormField({ name, width, ...otherProps }) {
   const { setFieldTouched, handleChange, errors, touched } = useFormikContext();
+
   return (
     <>
-      <AppTextInput
+      <TextInput
         onBlur={() => setFieldTouched(name)}
         onChangeText={handleChange(name)}
         width={width}
@@ -18,3 +19,5 @@ export default function AppFormField({ name, width, ...otherProps }) {
     </>
   );
 }
+
+export default AppFormField;
